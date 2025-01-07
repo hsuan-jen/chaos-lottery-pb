@@ -1,0 +1,46 @@
+syntax = "proto3";
+
+package pb;
+option go_package = "/;pb";
+
+/* 心跳 每50秒发送一次*/
+message S2C_Pong {
+}
+message C2S_Ping {
+}
+
+//充值成功
+message S2C_Recharge {
+  double Amount = 1;
+}
+
+//提现成功
+message S2C_Withdrawal {
+  double Amount = 1;
+}
+
+//异地登录
+message S2C_RemoteLogin {
+}
+
+/* 位置上报 */
+message C2S_OnlineSeat {
+  string Seat = 1; //活动位置
+}
+
+/* 抽取银金钻转盘 */
+message C2S_TreasureRun {
+  int32 Type = 1; //类型 1silver 2gold 3diamond
+}
+message S2C_SpinRun {
+  int64  ID           = 1; //奖品id
+  double Amount       = 2; //数额
+  int32  CurrencyType = 3; //货币类型 1cash 2bonus
+}
+message C2S_RaffleRun {
+}
+
+//公告
+message S2C_Notice {
+  string Content = 1; //内容
+}

@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package pb;
+option go_package = "/;pb";
+
+message Message {
+  int64 userId      = 1; //用户id
+  int64 to          = 2; //接收id
+  MessageType type  = 3;
+  bytes payload     = 4;
+  Status Status     = 5; //服务器状态
+}
+
+message Status {
+  int64  Code = 1;//状态码
+  string Msg = 2; //描述
+}
+
+enum MessageType {
+  Ping        = 0; //心跳
+  Recharge    = 1; //充值
+  Withdrawal  = 2; //提现
+  RemoteLogin = 3; //异地登录
+  OnlineSeat  = 4; //活动位置
+  TreasureRun = 5; //抽取银金钻转盘
+  RaffleRun   = 6; //抽取分享裂变转盘
+  Notice      = 7; //公告
+}
