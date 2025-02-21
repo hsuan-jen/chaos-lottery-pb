@@ -4,16 +4,16 @@ package pb;
 option go_package = "/;pb";
 
 message Message {
-  optional int64 userId      = 1; //用户id
-  optional  int64 to          = 2; //接收id
-  optional  MessageType type  = 3;
-  optional  bytes payload     = 4;
-  optional Status Status     = 5; //服务器状态
+  int64 userId      = 1; //用户id
+  int64 to          = 2; //接收id
+  MessageType type  = 3;
+  bytes payload     = 4;
+  Status Status     = 5; //服务器状态
 }
 
 message Status {
-  optional  int64  Code = 1;//状态码
-  optional  string Msg = 2; //描述
+  int64  Code = 1;//状态码
+  string Msg = 2; //描述
 }
 
 enum MessageType {
