@@ -1,0 +1,58 @@
+/** (前3位代表业务,后三位代表具体功能) **/
+
+// 全局错误码
+const (
+	Success           int = 0      //成功
+	Fail              int = 100000 //失败
+	ServerCommonError int = 100001 // 服务器开小差啦,稍后再来试一试
+	ReuqestParamError int = 100002 // 参数错误
+	MultipleReqError  int = 100003 // 过多请求
+	ObtainError       int = 100004 // 获取失败，请稍后再试
+	DBError           int = 100005 // 数据库繁忙,请稍后再试
+	ReqLimitError     int = 100006 // 接口限制请求频率
+	NotFound          int = 100007 // 数据不存在
+
+	WebsocketError int = 110001 // websocket处理异常
+
+	JwtError       int = 120001 //未登录或非法访问
+	JwtOverdue     int = 120002 //授权已过期
+	JwtResoluErr   int = 120003 //jwt解析错误
+	JwtCreateError int = 120004 //获取token失败
+)
+
+// 用户模块
+const (
+	ConfirmPwdError          int = 200000 // 两次输入的密码不一致
+	UsernamePwdError         int = 200001 // 账号或密码不正确
+	UserAlreadyRegisterError int = 200002 // 已注册
+	UserNoExistsError        int = 200003 // 账号不存在
+	UserOfflineError         int = 200004 // 该账号已下线，请重新登录
+	UserPwdError             int = 200005 // 密码不正确
+	UserFreeze               int = 200006 // 账号冻结
+	UserDisable              int = 200007 // 账号停用
+	LoginMaxLimit            int = 200008 // 最大登录人数限制
+	VerificationError        int = 200009 // 验证码过期或错误
+	LoginFailed              int = 200010 // 登录失败，请稍后再试
+	AccessTokenError         int = 200011 // Access token is not valid
+	ChannelError             int = 210000 // 渠道不存在
+
+	SpinInsufficient int = 220000 // 转盘次数不足
+	SpinPoint        int = 220001 // 转盘积分不足
+	ReceivedError    int = 230000 //已领取
+	NotReached       int = 230001 //未达到条件
+
+)
+
+// 游戏
+const (
+	//UserAmountError int = 300000 // 金额不足
+	GameLoginError int = 300000 // 进入游戏失败
+)
+
+//支付
+const (
+	PaymentConfError   int = 400000 // 支付配置出错
+	PaymentShut        int = 400001 //支付渠道已关闭
+	PaymentCreateError int = 400002 //创建订单失败
+	PaymentGoodsError  int = 400003 //商品不存在
+)
