@@ -43,4 +43,5 @@ message C2S_RaffleRun {
 //公告
 message S2C_Notice {
   string Content = 1; //内容
+  int32 Type = 2; //类型 1公告 3强弹窗
 }
