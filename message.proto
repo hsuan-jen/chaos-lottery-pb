@@ -25,4 +25,6 @@ enum MessageType {
   TreasureRun = 5; //抽取银金钻转盘
   RaffleRun   = 6; //抽取分享裂变转盘
   Notice      = 7; //公告
+  Amount      = 8; //金额变动
+  RedTip      = 9; //红点提示
 }

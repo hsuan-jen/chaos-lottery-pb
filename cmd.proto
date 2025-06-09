@@ -45,3 +45,14 @@ message S2C_Notice {
   string Content = 1; //内容
   int32 Type = 2; //类型 1公告 3强弹窗
 }
+
+//金额变动
+message S2C_Amount {
+  double Amount = 1; //数额
+}
+
+//红点提示
+message S2C_RedTip {
+  bool Mission  = 1; // 任务
+  bool Feedback = 2; // 反馈
+}
