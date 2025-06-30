@@ -1,9 +1,11 @@
+package xerr
+
 /** (前3位代表业务,后三位代表具体功能) **/
 
 // 全局错误码
 const (
-	Success           int = 0      //成功
-	Fail              int = 100000 //失败
+	Success           int = 0
+	Fail              int = 100000
 	ServerCommonError int = 100001 // 服务器开小差啦,稍后再来试一试
 	ReuqestParamError int = 100002 // 参数错误
 	MultipleReqError  int = 100003 // 过多请求
@@ -35,24 +37,45 @@ const (
 	LoginFailed              int = 200010 // 登录失败，请稍后再试
 	AccessTokenError         int = 200011 // Access token is not valid
 	ChannelError             int = 210000 // 渠道不存在
+	PhoneAlreadyBind         int = 210001 // 手机号已绑定
 
 	SpinInsufficient int = 220000 // 转盘次数不足
 	SpinPoint        int = 220001 // 转盘积分不足
 	ReceivedError    int = 230000 //已领取
 	NotReached       int = 230001 //未达到条件
 
+	MissionError      int = 240000 //任务不存在
+	MissionReceived   int = 240001 //任务奖励已领取
+	MissionNotAllowed int = 240002 //任务奖励未达到领取条件
+
+	EnergyNotAllowed int = 240010 //活力值不足
+	EnergyReceived   int = 240011 //活力值奖励已领取
+
+	UserAmountError int = 250000 //余额不足
+
 )
 
 // 游戏
 const (
-	//UserAmountError int = 300000 // 金额不足
 	GameLoginError int = 300000 // 进入游戏失败
 )
 
 //支付
 const (
-	PaymentConfError   int = 400000 // 支付配置出错
-	PaymentShut        int = 400001 //支付渠道已关闭
-	PaymentCreateError int = 400002 //创建订单失败
-	PaymentGoodsError  int = 400003 //商品不存在
+	PaymentConfError        int = 400000 // 支付配置出错
+	PaymentShut             int = 400001 //支付渠道已关闭
+	PaymentCreateError      int = 400002 //创建订单失败
+	PaymentGoodsError       int = 400003 //商品不存在
+	PaymentFrist            int = 400004 //首充商品已购买
+	PaymentQueryStatusError int = 400005 //充值订单为非等待状态
+	PaymentOrderStatusError int = 400006 //充值订单为非完成状态
+	PaymentAccountTypeError int = 400007 //非普通用户不能进行支付
+
+	WithdrawBankError          int = 410000 //提现账号不能为空
+	WithdrawAmountIllegal      int = 410001 //非法提现金额
+	WithdrawAmountError        int = 410002 //未达到提现条件
+	WithdrawalReviewError      int = 410003 //不为审核状态不能发起提现
+	WithdrawBankUnsupported    int = 410004 //不支持该银行提现
+	WithdrawPlatformError      int = 410005 //平台转账提现失败
+	WithdrawalAccountTypeError int = 410006 //非普通用户不能进行提现
 )
