@@ -54,8 +54,9 @@ const (
 
 	UserAmountError int = 250000 //余额不足
 
-	CheckIn7Signed int = 260000 //已签到7天
-	CheckInNumZero int = 260001 //签到次数为0
+	CheckIn7Signed     int = 260000 //已签到7天
+	CheckInNumZero     int = 260001 //签到次数为0
+	CheckInTodaySigned int = 260002 //今天已签到
 
 )
 
