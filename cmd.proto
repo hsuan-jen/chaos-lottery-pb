@@ -53,6 +53,5 @@ message S2C_Amount {
 
 //红点提示
 message S2C_RedTip {
-  int32 Mission  = 1; // 任务
-  int32 Feedback = 2; // 反馈
+  int32 Type = 1; //类型 1任务 2反馈
 }
