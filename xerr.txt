@@ -38,6 +38,7 @@ const (
 	AccessTokenError         int = 200011 // Access token is not valid
 	ChannelError             int = 210000 // 渠道不存在
 	PhoneAlreadyBind         int = 210001 // 手机号已绑定
+	PhoneFormatError         int = 210002 // 手机号格式错误
 
 	SpinInsufficient int = 220000 // 转盘次数不足
 	SpinPoint        int = 220001 // 转盘积分不足
@@ -52,6 +53,9 @@ const (
 	EnergyReceived   int = 240011 //活力值奖励已领取
 
 	UserAmountError int = 250000 //余额不足
+
+	CheckIn7Signed int = 260000 //已签到7天
+	CheckInNumZero int = 260001 //签到次数为0
 
 )
 
