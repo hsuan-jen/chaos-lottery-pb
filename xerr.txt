@@ -83,4 +83,6 @@ const (
 	WithdrawBankUnsupported    int = 410004 //不支持该银行提现
 	WithdrawPlatformError      int = 410005 //平台转账提现失败
 	WithdrawalAccountTypeError int = 410006 //非普通用户不能进行提现
+	WithdrawalInsufficient     int = 410007 //提现金额不足
+	WithdrawalTypeError        int = 410008 //提现类型错误
 )
