@@ -27,4 +27,5 @@ enum MessageType {
   Notice      = 7; //公告
   Amount      = 8; //金额变动
   RedTip      = 9; //红点提示
+  Kick        = 10; //踢人
 }
