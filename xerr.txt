@@ -39,6 +39,7 @@ const (
 	ChannelError             int = 210000 // 渠道不存在
 	PhoneAlreadyBind         int = 210001 // 手机号已绑定
 	PhoneFormatError         int = 210002 // 手机号格式错误
+	RegisterIPNumLimit       int = 210003 // 注册IP数量限制
 
 	SpinInsufficient int = 220000 // 转盘次数不足
 	SpinPoint        int = 220001 // 转盘积分不足
