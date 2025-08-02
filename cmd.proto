@@ -11,7 +11,9 @@ message C2S_Ping {
 
 //充值成功
 message S2C_Recharge {
-  double Amount = 1;
+  double Amount = 1; //充值金额
+  double Gain = 2; //实际获得金额
+  int32 Type = 3; //类型 1首充 2充值
 }
 
 //提现成功
@@ -43,7 +45,7 @@ message C2S_RaffleRun {
 //公告
 message S2C_Notice {
   string Content = 1; //内容
-  int32 Type = 2; //类型 1公告 3强弹窗
+  int32 Type = 2; //类型 1公告 3强弹窗 4跑马灯
 }
 
 //金额变动
@@ -54,4 +56,9 @@ message S2C_Amount {
 //红点提示
 message S2C_RedTip {
   int32 Type = 1; //类型 1任务 2反馈
+}
+
+//踢人
+message S2C_Kick {
+  string Msg = 1; //提示信息
 }
