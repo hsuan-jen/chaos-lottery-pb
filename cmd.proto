@@ -38,6 +38,8 @@ message S2C_SpinRun {
   int64  ID           = 1; //奖品id
   double Amount       = 2; //数额
   int32  CurrencyType = 3; //货币类型 1cash 2bonus
+  int64  Spin         = 4; //剩余次数
+  double Remaining    = 5; //剩余积分
 }
 message C2S_RaffleRun {
 }
