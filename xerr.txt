@@ -40,6 +40,7 @@ const (
 	PhoneAlreadyBind         int = 210001 // 手机号已绑定
 	PhoneFormatError         int = 210002 // 手机号格式错误
 	RegisterIPNumLimit       int = 210003 // 注册IP数量限制
+	UserDisabled             int = 210004 // 用户已被禁用
 
 	SpinInsufficient int = 220000 // 转盘次数不足
 	SpinPoint        int = 220001 // 转盘积分不足
@@ -86,4 +87,5 @@ const (
 	WithdrawalAccountTypeError int = 410006 //非普通用户不能进行提现
 	WithdrawalInsufficient     int = 410007 //提现金额不足
 	WithdrawalTypeError        int = 410008 //提现类型错误
+	WithdrawalNoRechargeError  int = 410009 //未充值不能进行提现
 )
